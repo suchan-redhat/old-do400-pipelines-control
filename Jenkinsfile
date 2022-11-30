@@ -8,11 +8,6 @@ pipeline {
         booleanParam(name: "RUN_FRONTEND_TESTS", defaultValue: true)
     }
     stages{
-        stage('checkout') {
-            steps {
-                git branch: 'test', url: 'https://github.com/suchan-redhat/DO400-apps-20221128.git' 
-            }
-        }
         stage('Run Tests') {
             parallel {
                 stage('Backend Tests') {
