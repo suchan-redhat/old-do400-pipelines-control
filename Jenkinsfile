@@ -9,7 +9,7 @@ pipeline {
     }
     stages{
         stage('checkout') {
-            step {
+            steps {
                 git branch: 'test', url: 'https://github.com/suchan-redhat/DO400-apps-20221128.git' 
             }
         }
