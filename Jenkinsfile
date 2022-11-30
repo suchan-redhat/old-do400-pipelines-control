@@ -9,7 +9,9 @@ pipeline {
     }
     stages{
         stage('checkout') {
-            git branch: 'test', url: 'https://github.com/suchan-redhat/DO400-apps-20221128.git' 
+            step {
+                git branch: 'test', url: 'https://github.com/suchan-redhat/DO400-apps-20221128.git' 
+            }
         }
         stage('Run Tests') {
             parallel {
